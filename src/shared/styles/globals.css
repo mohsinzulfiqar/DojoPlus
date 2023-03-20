@@ -1,0 +1,69 @@
+.css-j7qwjs,
+.MuiCalendarPicker-root {
+  background-color: #111;
+}
+
+.css-z26msc-MuiButtonBase-root-MuiPickersDay-root:hover {
+  color: #fff !important;
+}
+
+.MuiTypography-root,
+.MuiTypography-caption,
+.css-6otkot-MuiTypography-root {
+  color: #fff !important;
+}
+
+.input-error {
+  border-color: #e63946!important;
+}
+
+.error {
+  color: #e63946;
+  font-size: 1rem;
+  margin-top: 0.3rem;
+}
+.nav-active {
+  background-color: #fff !important;
+  border-radius: 100% !important;
+  color: #111 !important;
+}
+/*
+ * Form - CSS
+ */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: #fff !important;
+}
+input:-webkit-autofill:focus {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: rgba(27, 27, 27, 1) !important;
+}
+input::-webkit-input-placeholder {
+  font-weight: 600;
+}
+.text-dojogray-900 {
+  color: rgba(60, 60, 60, 1);
+  font-family: Saira, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+  Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+.focus\:outline-none:focus,
+.outline-none {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+.focus-within\:bg-white:focus-within {
+  background-color: rgba(255, 255, 255, 1);
+}
+.focus-within\:text-dojogray-900:focus-within {
+  color: rgba(27, 27, 27, 1);
+}
+/*
+* End - Form
+*/
+
+/*Scrolling desiging and its visibility*/
+.no-scroll-element::-webkit-scrollbar {
+  display: none;
+}

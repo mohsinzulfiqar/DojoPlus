@@ -1,0 +1,54 @@
+query GetRanks($profileId: ID!) {
+  profile(id: $profileId) {
+    username
+    rankIssuedProfile(
+      sort:{
+        rank:{
+         	order: DESC
+        }
+      }
+    ) {
+      items {
+        id
+        graduated
+        verified
+        master {
+          photo {
+            downloadUrl
+          }
+          fullName
+          rankw375h24 {
+            downloadUrl
+          }
+          rankw80h8 {
+            downloadUrl
+          }
+          rankSmall {
+            downloadUrl
+          }
+        }
+        masterPhoto {
+          downloadUrl
+        }
+        school {
+          schoolName
+          schoolLogo {
+            downloadUrl
+          }
+        }
+        rank {
+          id
+          level
+          order
+          degree
+          martialArt {
+            name
+          }
+          rankImageW375H24 {
+            downloadUrl
+          }
+        }
+      }
+    }
+  }
+}

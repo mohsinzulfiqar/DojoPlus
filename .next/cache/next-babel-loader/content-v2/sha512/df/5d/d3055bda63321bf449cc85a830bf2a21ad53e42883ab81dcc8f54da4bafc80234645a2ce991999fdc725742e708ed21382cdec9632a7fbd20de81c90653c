@@ -1,0 +1,1 @@
+{"ast":null,"code":"import createCache from '@emotion/cache';\nexport const createEmotionCache = () => {\n  return createCache({\n    key: 'css'\n  });\n};","map":null,"metadata":{},"sourceType":"module"}

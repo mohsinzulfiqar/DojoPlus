@@ -1,0 +1,28 @@
+query GetProfileGroups($profileId: ID!) {
+  schoolsList(
+    filter: {
+      schoolProfile: { some: { idProfile: { id: { equals: $profileId } } } }
+    }
+  ) {
+    items {
+      id
+      schoolName
+      schoolLogo {
+        downloadUrl
+      }
+      schoolProfile(filter: { idProfile: { id: { not_equals: $profileId } } }) {
+        count
+        items {
+          idProfile {
+            photo {
+              downloadUrl
+            }
+            rankSmall {
+              downloadUrl
+            }
+          }
+        }
+      }
+    }
+  }
+}

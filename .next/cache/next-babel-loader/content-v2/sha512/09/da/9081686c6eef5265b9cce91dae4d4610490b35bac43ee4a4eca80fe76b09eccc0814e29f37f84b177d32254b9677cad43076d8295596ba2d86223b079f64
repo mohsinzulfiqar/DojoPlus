@@ -1,0 +1,1 @@
+{"ast":null,"code":"const supportedLngs = ['en', 'es', 'pt'];\nexport const ni18nConfig = {\n  fallbackLng: supportedLngs,\n  supportedLngs,\n  ns: ['common'],\n  react: {\n    useSuspense: false\n  }\n};","map":null,"metadata":{},"sourceType":"module"}

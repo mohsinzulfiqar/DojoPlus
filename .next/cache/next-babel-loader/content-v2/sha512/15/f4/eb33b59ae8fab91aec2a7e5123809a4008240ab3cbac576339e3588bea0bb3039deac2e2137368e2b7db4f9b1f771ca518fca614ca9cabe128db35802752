@@ -1,0 +1,1 @@
+{"ast":null,"code":"import _ from 'lodash';\nexport const formattedResponse = records => {\n  return records.map(record => _.mapKeys(record.fields, (v, k) => _.camelCase(k)));\n};","map":null,"metadata":{},"sourceType":"module"}

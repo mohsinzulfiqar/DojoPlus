@@ -1,0 +1,1 @@
+{"ast":null,"code":"export const CURRENCY = 'usd'; // Set your amount limits: Use float for decimal currencies and\n// Integer for zero-decimal currencies: https://stripe.com/docs/currencies#zero-decimal.\n\nexport const MIN_AMOUNT = 10.0;\nexport const MAX_AMOUNT = 5000.0;\nexport const AMOUNT_STEP = 5.0;","map":null,"metadata":{},"sourceType":"module"}

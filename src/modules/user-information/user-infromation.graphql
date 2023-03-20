@@ -1,0 +1,16 @@
+query GetUserInformation($id: ID!) {
+  profile(id: $id) {
+    firstName
+    lastName
+    nickname
+    username
+    gender
+    nationality
+    birthdate
+    height
+    weight
+    biography
+    email
+    phone
+  }
+}

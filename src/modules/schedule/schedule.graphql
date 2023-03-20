@@ -1,0 +1,40 @@
+query GetSchoolSchedules($slug: String) {
+  schoolsList(filter: { slug: { equals: $slug } }) {
+    items {
+      id
+      phone
+      schoolName
+      schoolPhoneType
+      schoolLogo {
+        downloadUrl
+      }
+      address1
+      address2
+      state
+      city
+      zip
+      scheduleSchool(
+        orderBy: [weekday_ASC, startTime_ASC]
+      ) {
+        items {
+          id
+          name
+          startTime
+          endTime
+          room
+          weekday
+          idProfile {
+            firstName
+            lastName
+          }
+          idMartialArt {
+            name
+          }
+        }
+      }
+      schoolProductRelation {
+        count
+      }
+    }
+  }
+}

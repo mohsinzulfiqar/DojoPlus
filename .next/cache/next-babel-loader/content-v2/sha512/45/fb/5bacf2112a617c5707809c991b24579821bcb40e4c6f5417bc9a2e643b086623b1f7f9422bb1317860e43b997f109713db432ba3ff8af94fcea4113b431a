@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { createEvent } from '@cobuildlab/react-simple-state';\nconst INITIAL_STATE = {\n  token: null\n};\nexport const OnTokenEvent = createEvent({\n  initialValue: INITIAL_STATE\n});\nexport const OnTokenErrorEvent = createEvent();","map":null,"metadata":{},"sourceType":"module"}

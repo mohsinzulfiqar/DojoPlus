@@ -1,0 +1,20 @@
+query GetProfileVideos($profileId: ID!) {
+  videosList(
+    orderBy: createdAt_DESC
+    filter: { profile: { id: { equals: $profileId } } }
+  ) {
+    items {
+      id
+      title
+      youtubeID
+      category
+      dutarion
+      video {
+        downloadUrl
+      }
+      profile {
+        fullName
+      }
+    }
+  }
+}

@@ -1,0 +1,1 @@
+{"ast":null,"code":"import styled from 'styled-components';\nexport var Section = styled.section.withConfig({\n  displayName: \"Section\",\n  componentId: \"sc-mmw2q3-0\"\n})([\"flex:1;display:flex;flex-direction:column;\"]);","map":null,"metadata":{},"sourceType":"module"}

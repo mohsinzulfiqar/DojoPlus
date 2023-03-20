@@ -1,0 +1,38 @@
+query GetPlans($slug: String) {
+  schoolsList(filter: { slug: { equals: $slug } }) {
+    items {
+      phone
+      schoolName
+      schoolPhoneType
+      schoolLogo {
+        downloadUrl
+      }
+      address1
+      address2
+      state
+      city
+      zip
+      schoolProductRelation{
+       count
+       items{
+         	id
+          lookupKey
+          feesLookupKey
+          feesAmount
+          name
+          description
+          amount
+          isActive
+          interval
+          currency
+      	}
+      }
+    }
+  }
+}
+
+mutation createCheckoutSession($data: CreateCheckoutSessionInput!) {
+  createCheckoutSessionResolver(data: $data) {
+    redirectUrl
+  }
+}

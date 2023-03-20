@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { styled } from '@mui/material/styles';\nexport var StepContainer = styled('div')(function (_ref) {\n  var theme = _ref.theme;\n  return {\n    paddingTop: theme.spacing(5),\n    paddingLeft: theme.spacing(1),\n    paddingRight: theme.spacing(1),\n    paddingBottom: theme.spacing(16)\n  };\n});","map":null,"metadata":{},"sourceType":"module"}

@@ -1,0 +1,1 @@
+{"ast":null,"code":"import styled from 'styled-components';\nimport Divider from '@mui/material/Divider';\nexport var PrivateClassDivider = styled(Divider).withConfig({\n  displayName: \"PrivateClassDivider\",\n  componentId: \"sc-ayur4f-0\"\n})([\"border-color:#404040 !important;margin-left:0 !important;\"]);","map":null,"metadata":{},"sourceType":"module"}

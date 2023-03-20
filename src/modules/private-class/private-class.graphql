@@ -1,0 +1,83 @@
+query GetPrivateClass($username: String) {
+  privateClassesList(
+    groupBy: {
+      query: {
+        school: {
+          id: { as: "schoolId" }
+          schoolName: { as: "schoolName" }
+          address1: { as: "schoolAddress" }
+          schoolLogo: { downloadUrl: { as: "schoolLogo" } }
+          state: { as: "schoolState" }
+          city: { as: "schoolCity" }
+        }
+        id: { as: "countClass", fn: { aggregate: COUNT } }
+        _group: { as: "classesList" }
+      }
+    }
+    filter: { instructor: { username: { equals: $username } } }
+  ) {
+    groups {
+      schoolId: String
+      schoolName: String
+      schoolAddress: String
+      schoolLogo: String
+      schoolState: String
+      schoolCity: String
+      countClass: Int
+      classesList: PrivateClassGroup {
+        items {
+          currency
+          stripeProductId
+          startTime
+          name
+          lookupKey
+          isActive
+          id
+          endTime
+          duration
+          description
+          days
+          amount
+        }
+      }
+    }
+  }
+}
+
+mutation createPrivateClass($data: CreatePrivateClassCheckoutInput!) {
+  privateClassCheckout(data: $data) {
+    redirectUrl
+  }
+}
+
+
+query getPrivateClassPurchasesByDay($start: DateTime $end: DateTime $instructorUsername: String!){
+  privateClassPurchasesList(
+    filter:{
+      class:{
+        instructor:{
+        	username:{
+            equals: $instructorUsername
+          }
+        }
+      }
+      AND:[
+        {
+          startTime:{
+            lte: $end
+          }
+        },
+        {
+          startTime:{
+            gte: $start
+          }
+        }
+      ]
+    }
+  ){
+    items{
+      id
+      startTime
+    }
+  }
+}

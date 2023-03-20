@@ -1,0 +1,11 @@
+query getSchoolList{
+  schoolsList(
+    orderBy: [createdAt_DESC]
+  ){
+    count
+    items{
+      schoolName
+      slug
+    }
+  }
+}

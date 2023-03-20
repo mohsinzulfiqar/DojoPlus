@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { createEvent } from '@cobuildlab/react-simple-state';\nexport var GroupsStore = createEvent();\nexport var ErrorGetGroups = createEvent();","map":null,"metadata":{},"sourceType":"module"}

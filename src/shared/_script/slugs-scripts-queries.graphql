@@ -1,0 +1,60 @@
+query getSlugSchool {
+  schoolsList(orderBy: createdAt_ASC) {
+    items {
+      id
+      schoolName
+      slug
+      schoolShortUrlRelation {
+        items {
+          id
+          slug
+        }
+      }
+    }
+    count
+  }
+}
+
+mutation setSlugSchool(
+  $id: ID
+  $slug: String
+  $short: SchoolSchoolShortUrlRelationUpdateRelationInput
+) {
+  schoolUpdate(
+    filter: { id: $id }
+    data: { slug: $slug, schoolShortUrlRelation: $short }
+  ) {
+    id
+  }
+}
+
+query getSlugProfile {
+  profilesList {
+    items {
+      id
+      username
+      firstName
+      nickname
+      lastName
+      profileShortUrlRelation {
+        items {
+          id
+          slug
+        }
+      }
+    }
+  }
+}
+
+mutation setSlugProfile(
+  $id: ID
+  $username: String
+  $short: ProfileProfileShortUrlRelationUpdateRelationInput
+) {
+  profileUpdate(
+    filter: { id: $id }
+    data: { username: $username, profileShortUrlRelation: $short }
+  ) {
+    id
+  }
+}

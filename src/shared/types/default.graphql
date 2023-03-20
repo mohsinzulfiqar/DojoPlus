@@ -1,0 +1,7 @@
+query ExampleQuery {
+  usersList {
+    items {
+      id
+    }
+  }
+}

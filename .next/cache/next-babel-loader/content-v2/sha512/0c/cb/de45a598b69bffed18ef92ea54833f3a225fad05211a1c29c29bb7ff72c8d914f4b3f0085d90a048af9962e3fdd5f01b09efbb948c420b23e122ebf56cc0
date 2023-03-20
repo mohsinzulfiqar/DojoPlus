@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { createEvent } from '@cobuildlab/react-simple-state';\nexport var dayEvent = createEvent();","map":null,"metadata":{},"sourceType":"module"}

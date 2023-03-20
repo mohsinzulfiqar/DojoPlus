@@ -1,0 +1,31 @@
+query GetProfile($username: String) {
+  profile(username: $username) {
+    id
+    username
+    firstName
+    lastName
+    nickname
+    facebook
+    instagram
+    twitter
+    youtube
+    profileSchool {
+      count
+    }
+    accountType
+    rankw375h24 {
+      downloadUrl
+    }
+    photo {
+      downloadUrl
+    }
+  }
+  privateClassesList(
+    filter: {
+      instructor: { username: { equals: $username } }
+      isActive: { equals: true }
+    }
+  ) {
+    count
+  }
+}

@@ -1,0 +1,23 @@
+query GetAchivements($profileId: ID!) {
+  achievementsList(
+    orderBy: year_DESC
+    filter: { profile: { id: { equals: $profileId } } }
+  ) {
+    items {
+      id
+      name
+      martialArt {
+        id
+        name
+      }
+      championship
+      beltLevel
+      weight
+      rankResult
+      ageDivision
+      gender
+      location
+      year
+    }
+  }
+}
